@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+  h1= title
+  p  List of Students
+  - for (var i = 0; i < dataPass.length; i++) {
+    button
+      a(href='/classrooms/#{classID}/#{i}') #{dataPass[i]["name"]}
+  -}

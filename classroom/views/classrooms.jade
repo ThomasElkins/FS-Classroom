@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p List of Classrooms
+  - for (var i = 0; i < allData.length; i++) {
+    button
+      a(href='/classrooms/#{allData[i]["id"]}') #{allData[i]["subject"]}
+  -}
