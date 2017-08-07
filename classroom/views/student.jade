@@ -7,3 +7,6 @@ block content
     h5= dataPass["scores"]
   p Letter Grade:
     h5= dataPass["grade"]
+    form(method="post" action="")
+      input(type="text", name="text", placeholder="Enter grade here...")
+      input(type="submit" value="Post Grade")

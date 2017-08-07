@@ -24,12 +24,13 @@ router.get('/:id', function(req, res, next){
   res.render('students', {title: "Students", subtitle: "Students", classID: classID, dataPass: dataPass});
 });
 //Populate individual student page
-router.get('/:id/:name', function(req, res, next){
+router.get('/:id/:studentID', function(req, res, next){
   var classID = req.params.id;
-  var name = req.params.name;
-  var dataPass = allData[classID]["students"][name];
-  res.render('student', {title: "Student", subtitle: "Student", classID: classID, dataPass: dataPass});
+  var studentID = req.params.studentID;
+  var dataPass = allData[classID]["students"][studentID];
+  res.render('student', {title: "Student", subtitle: "Student", classID: classID, studentID: studentID, dataPass: dataPass});
 });
+//Post grade to student
 
 
 
